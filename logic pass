@@ -1,0 +1,15 @@
+// Q1
+
+#include<iostream>
+#include<algorithm>
+
+using namespace std;
+main() {
+   string D = "ABAABACCABA";
+
+   cout << "Initial string: " << D << endl;   //show all string
+
+  D.erase(remove(D.begin(), D.end(), 'B'), D.end()); //remove B from string
+   cout << "Final string: " << D;
+}
+
