@@ -12,4 +12,64 @@ main() {
   D.erase(remove(D.begin(), D.end(), 'B'), D.end()); //remove B from string
    cout << "Final string: " << D;
 }
+__________________________________________________________________________________________________________________
+
+
+//Q2
+
+
+#include <iostream>
+void primeInRange(int a, int z)
+{
+	int i, j, flag;
+	for (i = a; i <= z; i++) {
+
+		if (i == 1 || i == 0)
+			continue;
+		flag = 1;
+		for (j = 2; j <= i / 2; ++j) {
+			if (i % j == 0) {
+				flag = 0;
+				break;
+			}
+		}
+		if (flag == 1)
+			printf("%d ", i);
+	}
+}
+int main()
+{
+	int a = 1;
+	int z = 10;
+	primeInRange(a,z);
+	return 0;
+}
+
+_____________________________________________________________________________________________________________________________
+ 
+ 
+//Q3
+
+#include <iostream>
+#include <string>
+using namespace std;
+ 
+int count(string w, char l)
+{
+
+    int N = 0;
+    for (int i=0;i<w.length();i++)
+        if (w[i] == l)
+            N++;
+    return N;
+}
+int main()
+{
+    string str= "Artificial intelligence";
+    char l = 'e';
+    cout << count(str, l) << endl;
+    return 0;
+}
+
+//mustafa alramli
 
